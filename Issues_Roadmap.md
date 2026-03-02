@@ -15,15 +15,15 @@ Criar projeto Node.js e estrutura inicial.
 
 **Tasks:**
 
-- [ ] `npm init -y`
-- [ ] Criar pasta `src`
-- [ ] Criar arquivo `server.js` ou `app.js`
+- [x] `npm init -y`
+- [x] Criar pasta `src`
+- [x] Criar arquivo `server.js` ou `app.js`
 
 **Critérios de aceite:**
 
-- [ ] Projeto roda sem erros com `node`
-- [ ] Estrutura inicial criada corretamente
-- [ ] Nenhum erro no terminal ao executar
+- [x] Projeto roda sem erros com `node`
+- [x] Estrutura inicial criada corretamente
+- [x] Nenhum erro no terminal ao executar
 
 ---
 
@@ -34,15 +34,15 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Instalar express
-- [ ] Criar servidor básico
-- [ ] Criar rota `/health`
+- [x] Instalar express
+- [x] Criar servidor básico
+- [x] Criar rota `/health`
 
 **Critérios de aceite:**
 
-- [ ] Servidor inicia na porta definida
-- [ ] Acessar `http://localhost:3000/health` retorna resposta
-- [ ] Nenhum erro no console
+- [x] Servidor inicia na porta definida
+- [x] Acessar `http://localhost:3000/health` retorna resposta
+- [x] Nenhum erro no console
 
 ---
 
@@ -50,7 +50,7 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Criar:
+- [x] Criar:
   - controllers/
   - routes/
   - services/
@@ -58,9 +58,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Estrutura organizada dentro de `src`
-- [ ] Pastas criadas corretamente
-- [ ] Código continua rodando normalmente
+- [x] Estrutura organizada dentro de `src`
+- [x] Pastas criadas corretamente
+- [x] Código continua rodando normalmente
 
 ---
 
@@ -68,15 +68,15 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Instalar dotenv
-- [ ] Criar `.env`
-- [ ] Configurar porta
+- [x] Instalar dotenv
+- [x] Criar `.env`
+- [x] Configurar porta
 
 **Critérios de aceite:**
 
-- [ ] Servidor usa variável de ambiente
-- [ ] Alterar porta no `.env` reflete no servidor
-- [ ] `.env` não está versionado (gitignore)
+- [x] Servidor usa variável de ambiente
+- [x] Alterar porta no `.env` reflete no servidor
+- [x] `.env` não está versionado (gitignore)
 
 ---
 
@@ -88,14 +88,14 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Criar banco
-- [ ] Testar conexão
+- [x] Criar banco
+- [x] Testar conexão
 
 **Critérios de aceite:**
 
-- [ ] Banco criado com sucesso
-- [ ] Conexão estabelecida sem erro
-- [ ] Credenciais válidas funcionando
+- [x] Banco criado com sucesso
+- [x] Conexão estabelecida sem erro
+- [x] Credenciais válidas funcionando
 
 ---
 
