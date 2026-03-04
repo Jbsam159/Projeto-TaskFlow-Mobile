@@ -56,3 +56,5 @@ tmp/
 # -------------------------
 *.tsbuildinfo
 
+
+/src/generated/prisma

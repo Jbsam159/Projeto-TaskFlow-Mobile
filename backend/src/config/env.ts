@@ -18,4 +18,5 @@ function getEnvVariable(key: string): string {
 export const env = {
   PORT: Number(getEnvVariable("PORT")),
   NODE_ENV: getEnvVariable("NODE_ENV"),
+  DATABASE_URL: getEnvVariable("DATABASE_URL")
 }
