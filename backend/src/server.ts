@@ -2,20 +2,22 @@ import {app} from "./app.js"
 
 // Importando variáveis env
 import {env} from "../src/config/env.js"
-import { pool } from "./config/database.js";
+import { prisma } from "./config/prisma.js";
 
-async function testConnection() {
+async function startServer() {
   try {
-    const result = await pool.query('SELECT NOW()');
-    console.log('✅ Banco conectado:', result.rows[0]);
+    await prisma.$connect();
+    console.log("✅ Banco conectado com Prisma");
+
+    // Escutando a porta
+    app.listen(env.PORT, () => {
+      console.log(`🚀 Server running on port ${env.PORT}`);
+    })
+
   } catch (error) {
-    console.error('❌ Erro ao conectar no banco:', error);
+    console.error("❌ Erro ao iniciar servidor:", error);
+    process.exit(1);
   }
 }
 
-testConnection();
-
-// Escutando a porta
-app.listen(env.PORT, () => {
-  console.log(`🚀 Server running on port ${env.PORT}`);
-})
+startServer();
