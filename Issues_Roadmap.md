@@ -103,15 +103,15 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Instalar prisma
-- [ ] `npx prisma init`
-- [ ] Configurar DATABASE_URL
+- [x] Instalar prisma
+- [x] `npx prisma init`
+- [x] Configurar DATABASE_URL
 
 **Critérios de aceite:**
 
-- [ ] Prisma inicializado corretamente
-- [ ] Conexão com banco funcionando
-- [ ] Arquivo schema.prisma criado
+- [x] Prisma inicializado corretamente
+- [x] Conexão com banco funcionando
+- [x] Arquivo schema.prisma criado
 
 ---
 
