@@ -13,9 +13,33 @@ datasource db {
   provider = "postgresql"
 }
 
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+
+  tasks Task[]
+
+  @@map("users")
+}
+
 model Task {
   id        String   @id @default(uuid())
   title     String
+  priority  Priority @default(MEDIUM)
   completed Boolean  @default(false)
   createdAt DateTime @default(now())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  @@map("tasks")
 }
