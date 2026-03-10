@@ -119,14 +119,14 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Criar model User
-- [ ] Criar model Task
+- [x] Criar model User
+- [x] Criar model Task
 
 **Critérios de aceite:**
 
-- [ ] Models definidos no Prisma
-- [ ] Relação entre User e Task funcionando
-- [ ] Schema válido sem erros
+- [x] Models definidos no Prisma
+- [x] Relação entre User e Task funcionando
+- [x] Schema válido sem erros
 
 ---
 
@@ -134,13 +134,13 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Rodar migration
+- [x] Rodar migration
 
 **Critérios de aceite:**
 
-- [ ] Tabelas criadas no banco
-- [ ] Prisma migrate executa sem erro
-- [ ] Dados podem ser inseridos manualmente
+- [x] Tabelas criadas no banco
+- [x] Prisma migrate executa sem erro
+- [x] Dados podem ser inseridos manualmente
 
 ---
 
@@ -152,14 +152,14 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Criar `/register`
-- [ ] Salvar usuário
+- [x] Criar `/register`
+- [x] Salvar usuário
 
 **Critérios de aceite:**
 
-- [ ] Usuário criado no banco
-- [ ] Não permite dados inválidos
-- [ ] Retorna resposta de sucesso
+- [x] Usuário criado no banco
+- [x] Não permite dados inválidos
+- [x] Retorna resposta de sucesso
 
 ---
 
@@ -167,15 +167,15 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Criar `/login`
-- [ ] Validar credenciais
-- [ ] Gerar JWT
+- [x] Criar `/login`
+- [x] Validar credenciais
+- [x] Gerar JWT
 
 **Critérios de aceite:**
 
-- [ ] Login retorna token válido
-- [ ] Credenciais inválidas retornam erro
-- [ ] Token pode ser usado posteriormente
+- [x] Login retorna token válido
+- [x] Credenciais inválidas retornam erro
+- [x] Token pode ser usado posteriormente
 
 ---
 
