@@ -183,13 +183,13 @@ Criar servidor HTTP básico.
 
 **Tasks:**
 
-- [ ] Criar middleware JWT
+- [x] Criar middleware JWT
 
 **Critérios de aceite:**
 
-- [ ] Rotas protegidas bloqueiam acesso sem token
-- [ ] Token válido permite acesso
-- [ ] Token inválido retorna erro
+- [x] Rotas protegidas bloqueiam acesso sem token
+- [x] Token válido permite acesso
+- [x] Token inválido retorna erro
 
 ---
 
