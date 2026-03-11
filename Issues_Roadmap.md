@@ -201,9 +201,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Tarefa salva no banco
-- [ ] Vinculada ao usuário
-- [ ] Retorna sucesso
+- [x] Tarefa salva no banco
+- [x] Vinculada ao usuário
+- [x] Retorna sucesso
 
 ---
 
@@ -211,9 +211,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [x] Retorna apenas tarefas do usuário logado
-- [x] Lista não quebra se vazia
-- [x] Dados corretos retornados
+- [ ] Retorna apenas tarefas do usuário logado
+- [ ] Lista não quebra se vazia
+- [ ] Dados corretos retornados
 
 ---
 
