@@ -211,9 +211,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Retorna apenas tarefas do usuário logado
-- [ ] Lista não quebra se vazia
-- [ ] Dados corretos retornados
+- [x] Retorna apenas tarefas do usuário logado
+- [x] Lista não quebra se vazia
+- [x] Dados corretos retornados
 
 ---
 

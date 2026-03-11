@@ -25,7 +25,7 @@ export async function loginService({ email, password }: LoginRequest) {
   }
 
   const token = jwt.sign(
-    { userId: user.id },
+    { sub: user.id },
     env.JWT_SECRET,
     { expiresIn: "1d" }
   )
