@@ -221,9 +221,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Atualiza status/prioridade
-- [ ] Persistido no banco
-- [ ] Retorna sucesso
+- [x] Atualiza status/prioridade
+- [x] Persistido no banco
+- [x] Retorna sucesso
 
 ---
 
