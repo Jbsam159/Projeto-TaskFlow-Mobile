@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { createTask } from "../services/taskService.js"
+import { createTask, getTasksByUser } from "../services/taskService.js"
 
 export async function createTaskController(req: Request, res: Response) {
   try {
@@ -28,6 +28,26 @@ export async function createTaskController(req: Request, res: Response) {
 
     return res.status(500).json({
       error: "Erro ao criar tarefa"
+    })
+
+  }
+}
+
+export async function listTasksController(req: Request, res: Response) {
+  try {
+
+    const userId = req.userId
+
+    const tasks = await getTasksByUser(userId)
+
+    return res.status(200).json(tasks)
+
+  } catch (error) {
+
+    console.error("Erro ao listar tarefas:", error)
+
+    return res.status(500).json({
+      error: "Erro ao listar tarefas"
     })
 
   }
