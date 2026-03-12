@@ -231,9 +231,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Tarefa removida do banco
-- [ ] Não aparece mais na listagem
-- [ ] Não quebra se ID inválido
+- [x] Tarefa removida do banco
+- [x] Não aparece mais na listagem
+- [x] Não quebra se ID inválido
 
 ---
 

@@ -16,6 +16,12 @@ interface UpdateTaskDTO {
   completed?: boolean
 }
 
+interface DeleteTaskDTO {
+  taskId: string
+  userId: string
+}
+
+
 export async function createTask(data: CreateTaskDTO) {
   const task = await prisma.task.create({
     data: {
@@ -66,4 +72,26 @@ export async function updateTask(data: UpdateTaskDTO) {
   })
 
   return updatedTask
+}
+
+export async function deleteTask(data: DeleteTaskDTO) {
+
+  const task = await prisma.task.findFirst({
+    where: {
+      id: data.taskId,
+      userId: data.userId
+    }
+  })
+
+  if (!task) {
+    throw new Error("Task não encontrada")
+  }
+
+  await prisma.task.delete({
+    where: {
+      id: data.taskId
+    }
+  })
+
+  return { message: "Tarefa deletada com sucesso" }
 }
