@@ -249,9 +249,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] App inicia com `npx expo start`
-- [ ] Abre no emulador ou celular
-- [ ] Sem erros no console
+- [x] App inicia com `npx expo start`
+- [x] Abre no emulador ou celular
+- [x] Sem erros no console
 
 ---
 
@@ -259,9 +259,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Pastas organizadas corretamente
-- [ ] Código continua funcionando
-- [ ] Separação clara de responsabilidades
+- [x] Pastas organizadas corretamente
+- [x] Código continua funcionando
+- [x] Separação clara de responsabilidades
 
 ---
 
