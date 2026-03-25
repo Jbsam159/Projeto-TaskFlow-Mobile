@@ -269,9 +269,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Navegação entre telas funciona
-- [ ] Nenhum erro de rota
-- [ ] Telas renderizam corretamente
+- [x] Navegação entre telas funciona
+- [x] Nenhum erro de rota
+- [x] Telas renderizam corretamente
 
 ---
 
@@ -283,9 +283,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Inputs funcionam
-- [ ] UI renderiza corretamente
-- [ ] Botão responde ao clique
+- [x] Inputs funcionam
+- [x] UI renderiza corretamente
+- [x] Botão responde ao clique
 
 ---
 
