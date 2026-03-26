@@ -293,9 +293,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Login chama API
-- [ ] Recebe token
-- [ ] Trata erro corretamente
+- [x] Login chama API
+- [x] Recebe token
+- [x] Trata erro corretamente
 
 ---
 
@@ -303,9 +303,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Token salvo no AsyncStorage
-- [ ] Usuário permanece logado
-- [ ] Logout limpa dados
+- [x] Token salvo no AsyncStorage
+- [x] Usuário permanece logado
+- [x] Logout limpa dados
 
 ---
 

@@ -10,7 +10,7 @@ async function startServer() {
     console.log("✅ Banco conectado com Prisma");
 
     // Escutando a porta
-    app.listen(env.PORT, () => {
+    app.listen(env.PORT, '0.0.0.0', () => {
       console.log(`🚀 Server running on port ${env.PORT}`);
     })
 

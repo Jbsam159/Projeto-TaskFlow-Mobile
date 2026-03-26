@@ -1,22 +1,49 @@
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native"
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  ActivityIndicator,
+} from "react-native"
 import { useState } from "react"
+
+import { loginRequest } from "../services/api"
+
+import { useContext } from "react"
+import { AuthContext } from "../contexts/AuthContext"
 
 export default function LoginScreen({ navigation }: any) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
 
-  const handleLogin = () => {
-  // 🔥 VALIDAÇÃO AQUI
-  if (!email || !password) {
-    console.log("Preencha todos os campos")
-    return
+  const {login} = useContext(AuthContext)
+
+  const handleLogin = async () => {
+    // 🔥 Validação
+    if (!email || !password) {
+      setError("Preencha todos os campos")
+      return
+    }
+
+    try {
+      setLoading(true)
+      setError("")
+
+      const data = await loginRequest(email, password)
+
+      console.log("TOKEN:", data.token)
+
+      await login(data.token)
+
+    } catch (err: any) {
+      setError(err.message || "Erro ao fazer login")
+    } finally {
+      setLoading(false)
+    }
   }
-
-    // futura chamada da API
-    console.log("Email:", email)
-    console.log("Senha:", password)
-  }
-
 
   return (
     <View style={styles.container}>
@@ -39,11 +66,27 @@ export default function LoginScreen({ navigation }: any) {
         secureTextEntry
       />
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Entrar</Text>
+      {/* 🔥 Mensagem de erro */}
+      {error !== "" && (
+        <Text style={styles.error}>{error}</Text>
+      )}
+
+      <TouchableOpacity
+        style={[styles.button, loading && styles.buttonDisabled]}
+        onPress={handleLogin}
+        disabled={loading}
+      >
+        {loading ? (
+          <ActivityIndicator color="#fff" />
+        ) : (
+          <Text style={styles.buttonText}>Entrar</Text>
+        )}
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Register")}
+        disabled={loading}
+      >
         <Text style={styles.link}>Criar conta</Text>
       </TouchableOpacity>
     </View>
@@ -91,4 +134,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#007bff",
   },
+
+  error: {
+    color: "red",
+    textAlign: "center",
+    marginBottom: 10,
+  },
+
+  buttonDisabled: {
+    opacity: 0.7,
+  },
+
 })
