@@ -317,9 +317,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Lista renderiza corretamente
-- [ ] Não quebra vazia
-- [ ] Atualiza após mudanças
+- [x] Lista renderiza corretamente
+- [x] Não quebra vazia
+- [x] Atualiza após mudanças
 
 ---
 

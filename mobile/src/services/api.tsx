@@ -35,3 +35,19 @@ export async function logoutRequest() {
   await AsyncStorage.removeItem("user")
 }
 
+export async function getTasks(token: string) {
+  const response = await fetch(`${API_URL}/tasks`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+
+  const data = await response.json()
+
+  if (!response.ok) {
+    throw new Error(data.error || "Erro ao buscar tarefas")
+  }
+
+  return data
+}
+
