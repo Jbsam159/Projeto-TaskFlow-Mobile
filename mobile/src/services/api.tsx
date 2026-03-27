@@ -51,3 +51,30 @@ export async function getTasks(token: string) {
   return data
 }
 
+export async function createTask(token: string, title: string, priority: string) {
+  
+  console.log("ENVIANDO:", { title, priority })
+
+  const response = await fetch(`${API_URL}/tasks`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ title, priority }),
+  })
+
+  const data = await response.json()
+
+  console.log("RESPONSE CREATE TASK:", data)
+  console.log("STATUS:", response.status)
+
+  if (!response.ok) {
+    throw new Error(
+      data.error || data.message || JSON.stringify(data)
+    )
+  }
+
+  return data
+}
+

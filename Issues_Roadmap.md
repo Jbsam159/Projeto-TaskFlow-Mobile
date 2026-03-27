@@ -327,9 +327,9 @@ Criar servidor HTTP básico.
 
 **Critérios de aceite:**
 
-- [ ] Tarefa aparece na lista
-- [ ] Input limpa após envio
-- [ ] Não aceita vazio
+- [x] Tarefa aparece na lista
+- [x] Input limpa após envio
+- [x] Não aceita vazio
 
 ---
 
